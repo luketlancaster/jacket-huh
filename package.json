@@ -1,0 +1,19 @@
+{
+  "name": "jacket-huh",
+  "version": "1.0.0",
+  "description": "Basic site built with Sass, HTML, and jQuery with the intent of learning.",
+  "main": "public/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luketlancaster/jacket-huh.git"
+  },
+  "author": "Luke Lancaster <luketlancaster@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luketlancaster/jacket-huh/issues"
+  },
+  "homepage": "https://github.com/luketlancaster/jacket-huh"
+}

@@ -1,0 +1,17 @@
+{
+  "name": "jacket-huh",
+  "version": "1.0.0",
+  "homepage": "https://github.com/luketlancaster/jacket-huh",
+  "authors": [
+    "Luke Lancaster <luketlancaster@gmail.com>"
+  ],
+  "main": "public/index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
