@@ -84,7 +84,8 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          'public/css/main.css': 'app/styles/main.scss'
+          'public/css/main.css': 'app/styles/main.scss',
+          'public/css/normalize.css': 'bower_components/normalize.css/normalize.css'
         }
       }
     },
