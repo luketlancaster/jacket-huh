@@ -26,25 +26,12 @@ module.exports = function (grunt) {
             src: [
               '**',
               '!**/*.jade',
-              '!**/*.{sass,scss}',
-              '!**/*.js'
+              '!**/*.{sass,scss}'
             ],
             dest: 'public/',
             filter: 'isFile'
           }
         ]
-      }
-    },
-
-    concat: {
-      iife: {
-        options: {
-          banner: ';(function(){',
-          footer: '}());'
-        },
-
-        src: ['public/js/main.min.js'],
-        dest: 'public/js/main.min.js'
       }
     },
 
@@ -118,7 +105,7 @@ module.exports = function (grunt) {
           'public/**/*.html',
           'public/css/**/*.css',
           'public/js/**/*.js',
-          'app/scripts/**/*.js'
+          'public/scripts/**/*.js'
         ]
       },
 
@@ -136,6 +123,15 @@ module.exports = function (grunt) {
       }
     },
 
+    concat: {
+      mine: {
+        dist: {
+          src: ['app/js/main.js'],
+          dest: 'public/js/main.min.js'
+        },
+      },
+    },
+
     wiredep: {
       build: {
         src: ['public/**/*.html']
@@ -145,7 +141,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('default', []);
   grunt.registerTask('build', ['setup', 'combineJs']);
-  grunt.registerTask('serve', ['setup', 'connect', 'watch']);
+  grunt.registerTask('serve', ['setup', 'combineJs', 'connect', 'watch']);
   grunt.registerTask('setup', [
     'clean',
     'copy',
@@ -157,9 +153,9 @@ module.exports = function (grunt) {
   grunt.registerTask('combineJs', [
     'useminPrepare',
     'concat:generated',
+    'concat:mine',
     'uglify:generated',
     'usemin',
-    'concat:iife',
     'clean:temp'
   ]);
 };

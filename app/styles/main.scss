@@ -1,6 +1,31 @@
-.container {
+@import "variables";
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+
+body {
+  background-color: $base-background;
   width: 100%;
-  .button {
+  font-family: 'Oswald', sans-serif;
+  font-size: 5em;
+  .container {
     width: 100%;
+    text-align: center;
+    .header {
+      margin: 0;
+      padding: 10px;
+      border: none;
+      background-color: $light-blue;
+    }
+    h1 {
+      color: $base-font;
+    }
+    .hidden {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    font-size: 4em;  
   }
 }

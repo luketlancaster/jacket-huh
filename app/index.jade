@@ -3,20 +3,25 @@ html(lang='en-US')
   head
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    title My Title
+    meta(name='viewport', content='width=device-width, initial-scale=1, minimum-scale=1')
+    title Jacket?
+    link(rel="icon", type="imgage/ico", href="favicon-sun-o.ico")
     link(rel='stylesheet', href='css/normalize.css')
+    link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css')
     link(rel='stylesheet', href='css/main.css')
   body
       <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
       .container
-        button.button Jacket?
+        h1.header Jacket?
+        h1#iconBox
+          i.fa.fa-sun-o.fa-spin
+        h1#yesOrNo
 
       // build:js js/vendor.min.js
       // bower:js
       // endbower
       // endbuild
-      // build:js js/main.min.js
-      script(src="/scripts/main.js")
+      script(src="js/vendor.min.js")
+      script(src="js/main.js")
       // endbuild
