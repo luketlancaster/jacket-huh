@@ -35,7 +35,7 @@ $(function(){
     var temp = data.forecast.simpleforecast.forecastday[1].high.fahrenheit;
     if (temp > 67) {
       $("#iconBox").toggleClass("hidden")
-      $("#yesOrNo").text("NO");
+      $("#yesOrNo").text("NO, IT'S " + temp + "˚");
     }
     else {
       $("#iconBox").toggleClass("hidden")
