@@ -5,7 +5,7 @@ $(function(){
       success,
       lat,
       lon,
-      url = "http://api.wunderground.com/api/db432a740561cd8d/forecast/geolookup",
+      url = "http://api.wunderground.com/api/db432a740561cd8d/forecast/geolookup/conditions",
       response,
       clickCount = 0;
 
@@ -32,10 +32,10 @@ $(function(){
   navigator.geolocation.getCurrentPosition(success, error, options);
 
   function display(data) {
-    var temp = data.forecast.simpleforecast.forecastday[1].high.fahrenheit;
-    if (temp > 67) {
+    var temp = data.current_observation.temp_f;
+    if (temp > 70) {
       $("#iconBox").toggleClass("hidden")
-      $("#yesOrNo").text("NO, IT'S " + temp + "˚");
+      $("#yesOrNo").text("NO");
     }
     else {
       $("#iconBox").toggleClass("hidden")
