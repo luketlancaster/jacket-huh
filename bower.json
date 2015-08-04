@@ -17,6 +17,7 @@
   "dependencies": {
     "jquery": "~2.1.4",
     "normalize.css": "~3.0.3",
-    "firebase": "~2.2.9"
+    "firebase": "~2.2.9",
+    "moment": "~2.10.6"
   }
 }

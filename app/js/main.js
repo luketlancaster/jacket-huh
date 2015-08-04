@@ -8,7 +8,8 @@ $(function(){
       url = "http://api.wunderground.com/api/db432a740561cd8d/forecast/geolookup/conditions",
       response,
       fb = new Firebase('https://jacket.firebaseio.com/');
-      clickCount = 0;
+      clickCount = 0,
+      time = moment().format();
 
   options = {
     timeout: 5000,
@@ -34,7 +35,7 @@ $(function(){
 
   function display(data) {
     var temp = data.current_observation.temp_f;
-    fb.push({lat: lat, lon: lon, temp: temp});
+    fb.push({lat: lat, lon: lon, temp: temp, date: time});
     if (temp > 70) {
       $("#iconBox").toggleClass("hidden")
       $("#yesOrNo").text("NO");
