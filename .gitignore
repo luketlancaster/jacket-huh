@@ -2,8 +2,6 @@
 logs
 *.log
 
-# Public dir
-public
 
 # Runtime data
 pids
